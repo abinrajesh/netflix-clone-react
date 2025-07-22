@@ -8,6 +8,8 @@
     color: white;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 
 }
 
@@ -83,9 +85,10 @@
     left: 30px;
     color: rgb(179, 179, 179);
 }
+
 .email-input:focus-within {
     outline: 2px solid white;
-    border-radius: 3px; 
+    border-radius: 3px;
     outline-offset: 2px;
 }
 

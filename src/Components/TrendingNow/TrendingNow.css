@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.trending-now-container {
+    width: 97%;
+}
+
+.trending-now-title-container h2 {
+    color: white;
+}
+
+.trending-now-cards-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.trending-now-cards {
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    margin-top: 10px;
+}
+
+.scroll-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 7px;
+    height: 100px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.scroll-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2)
+}
+
+.trending-now-cards-list-container {
+    overflow-x: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.trending-now-list {
+    display: flex;
+    gap: 30px;
+    overflow-x: hidden;
+    padding: 10px 15px;
+}
+
+.trending-now-card>button {
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    display: block;
+    position: relative;
+    transform: scale(0.95);
+    transition: all ease-in-out 0.3s;
+
+}
+
+.trending-now-card>button:hover {
+    transform: scale(1);
+    transition: all ease-in-out 0.3s;
+}
+
+.trending-now-poster {
+    background-image: url(https://occ-0-6501-3662.1.nflxso.net/dnm/api/v6/mAcAr9TxZIVbINe88xb3Teg5_OA/AAAABaW57jWqw0Gs9gqgmW816THwyNfPqphIiruQRFy9KXtt9PTPJpB4kzDKriPcpNjPKCj0itu1Yfjl-CR8rGEokBHPKE4O9lZQHXHRRpUHEelwoKk8lOf4gqlws-HnR2iZeSk4.webp?r=609);
+    background-size: cover;
+    height: 270px;
+    width: 188px;
+    border-radius: 10px;
+
+}
+
+.trending-number {
+    position: absolute;
+    bottom: 10px;
+    left: -20px;
+    color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+    font-size: 120px;
+    font-weight: bolder;
+    text-shadow:
+        2px 0 white,
+        -2px 0 white,
+        0 2px white,
+        0 -2px white,
+        2px 2px white,
+        -2px -2px white,
+        2px -2px white,
+        -2px 2px white;
+}
