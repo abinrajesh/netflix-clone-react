@@ -1,0 +1,41 @@
+.language-btn {
+    position: relative;
+    border: 0.5px solid rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    background-color: rgba(20, 20, 20, 0.721);
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.sign-in-btn {
+    background-color: red;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+    padding: 7px 20px;
+}
+
+.get-stared-btn>button {
+    background-color: red;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 3px;
+    padding: 15px 20px;
+}
+
+.get-stared-btn>button>span {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.red-btn-hwr:hover {
+    background: rgb(193, 17, 25);
+    cursor: pointer;
+}

@@ -1,0 +1,95 @@
+.banner {
+    background: rgba(0, 0, 0, 0.7) url(/src/Assets/Banner\ English.jpg);
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    display: flex;
+    align-items: center;
+
+}
+
+.content {
+    position: absolute;
+    top: 200px;
+    left: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.description {
+    max-width: 700px;
+    text-align: center;
+}
+
+.description>h1 {
+    font-size: 56px;
+    font-weight: 900;
+    line-height: 70px;
+    padding-bottom: 15px;
+}
+
+.description>p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 25px;
+}
+
+.get-started-container>form>h3 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+.submit-email {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.email-input {
+    position: relative;
+}
+
+.email-input>input {
+    background-color: rgba(20, 20, 20, 0.721);
+    border: 0.5px solid rgb(106, 104, 104);
+    color: white;
+    outline: none;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 15px 15px 15px 30px;
+    width: 350px;
+}
+
+
+.email-placeholder {
+    pointer-events: none;
+    transform: translateY(0);
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    color: rgb(179, 179, 179);
+}
+.email-input:focus-within {
+    outline: 2px solid white;
+    border-radius: 3px; 
+    outline-offset: 2px;
+}
+
+.email-input:focus-within .email-placeholder {
+    transform: translateY(-0.8rem);
+    font-size: 12px;
+}
