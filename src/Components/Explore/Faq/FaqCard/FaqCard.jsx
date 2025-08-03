@@ -1,0 +1,36 @@
+import React from "react";
+import styles from "./FaqCard.module.css";
+import classNames from "classnames";
+
+function FaqCard() {
+  return (
+    <div className={classNames(styles.faqCardContainer)}>
+      <button className={classNames(styles.faqCard)}>
+        FaqCard{" "}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          role="img"
+          viewBox="0 0 36 36"
+          width="36"
+          height="36"
+          data-icon="PlusLarge"
+          aria-hidden="true"
+          class="default-ltr-cache-1ulhx3w e164gv2o4"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M17 17V3H19V17H33V19H19V33H17V19H3V17H17Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+      </button>
+      <div className={classNames(styles.faqCardcontent)}>
+        
+      </div>
+    </div>
+  );
+}
+
+export default FaqCard;

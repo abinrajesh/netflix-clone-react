@@ -1,0 +1,42 @@
+.languageSelector {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+.languageSvg {
+  position: absolute;
+  color: white;
+  fill: currentColor;
+}
+
+.languageSvgLeft {
+  left: 10px;
+  top: 6px;
+}
+
+.languageSvgRight {
+  right: 10px;
+  top: 6px;
+}
+
+.languageSelector select {
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0.1px white;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  padding: 2px 30px;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.languageSelector select option {
+  color: black;
+}

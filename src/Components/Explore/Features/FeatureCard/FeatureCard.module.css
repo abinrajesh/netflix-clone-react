@@ -1,0 +1,29 @@
+.featureCard {
+  height: 290px;
+  width: 290px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+  box-sizing: border-box;
+  padding: 20px;
+  position: relative;
+}
+.feaureCardHeader {
+  margin-top: 10px;
+}
+.feaureCardHeader h3 {
+  font-size: 23px;
+}
+.featureCardDescription {
+  margin-top: 20px;
+}
+.featureCardDescription p {
+  font-size: 16px;
+  color: #bbbabf;
+  font-weight: 500;
+}
+.featureSvgContainer {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}

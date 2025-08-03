@@ -1,0 +1,81 @@
+.banner {
+  position: relative;
+  background: url("/src/assets/BannerEnglish.jpg");
+  height: 97vh;
+  color: white;
+  overflow: hidden;
+}
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  height: 97vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.banner-content-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.banner-content {
+  width: 50%;
+}
+
+.banner-header {
+  margin-top: 20%;
+  text-align: center;
+}
+.banner-header h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.banner-header p {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.banner-curve-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.banner-bottom-curve {
+  width: 110vw;
+  height: 60px;
+  position: absolute;
+  z-index: 8;
+  bottom: -20px;
+  background: linear-gradient(
+    to right,
+    rgba(33, 13, 22, 1) 16%,
+    rgba(184, 40, 105, 1),
+    rgba(229, 9, 20, 1),
+    rgba(184, 40, 105, 1),
+    rgba(33, 13, 22, 1) 84%
+  );
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  overflow: hidden;
+}
+.banner-bottom-curve::before {
+  content: "";
+  width: 110vw;
+  height: 60px;
+  background: radial-gradient(
+      50% 500% at 50% -420%,
+      rgba(64, 97, 231, 0.4) 80%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    black;
+  position: absolute;
+  z-index: 9;
+  bottom: -5px;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  overflow: hidden;
+}

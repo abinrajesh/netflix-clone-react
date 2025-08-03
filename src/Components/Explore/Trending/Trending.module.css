@@ -1,0 +1,49 @@
+.trendingSection {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  color: white;
+
+  position: relative;
+}
+.trendingHeader h3 {
+  font-size: 24px;
+}
+.trendingContent ul {
+  list-style-type: none;
+  padding: 20px 0;
+  display: flex;
+  gap: 30px;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+.scrollBtns {
+  width: 100%;
+  height: 270px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.scrollBtn {
+  height: 50%;
+  width: 25px;
+  border-radius: 10px;
+  background-color: hsla(0, 0%, 10%, 1);
+  border: none;
+  color: white;
+  position: absolute;
+}
+.scrollBtn:hover {
+  background-color: hsla(0, 0%, 5%, 1);
+}
+
+.leftScrollBtn {
+  left: 0;
+  z-index: 9;
+}
+.rightScrollBtn {
+  right: 0;
+  z-index: 9;
+}

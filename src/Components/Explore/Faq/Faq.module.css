@@ -1,0 +1,15 @@
+.faqSection {
+  margin: 70px 0;
+  color: white;
+}
+.faqHeader h3 {
+  font-size: 24px;
+}
+.faqCards ul {
+  margin-top: 20px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+}
