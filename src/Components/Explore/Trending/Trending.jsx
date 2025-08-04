@@ -1,18 +1,69 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Trending.module.css";
 import TrendingCard from "./TrendingCard/TrendingCard";
 import classNames from "classnames";
 
 function Trending() {
+  const [showScrollLeft, setShowScrollLeft] = useState(false);
+  const [showScrollRight, setShowScrollRight] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const scrollListRef = useRef(null);
+
+  useEffect(() => {
+    const el = scrollListRef.current;
+
+    const handleScroll = () => {
+      if (!el) return;
+
+      const atStart = el.scrollLeft === 0;
+      const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth;
+
+      setShowScrollLeft(!atStart);
+      setShowScrollRight(!atEnd);
+    };
+
+    if (el) {
+      handleScroll();
+    }
+
+    el.addEventListener("scroll", handleScroll);
+
+    return () => {
+      el.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToLeft = () => {
+    if (scrollListRef.current) {
+      scrollListRef.current.scrollLeft = 0;
+    }
+  };
+
+  const scrollToRight = () => {
+    if (scrollListRef.current) {
+      scrollListRef.current.scrollLeft = scrollListRef.current.scrollWidth;
+    }
+  };
+
   return (
     <div className={styles.trendingSection}>
       <div className={styles.trendingHeader}>
         <h3>Trending Now</h3>
       </div>
       <div className={styles.trendingContent}>
-        <ul>
-          <div className={styles.scrollBtns}>
-            <button className={classNames(styles.scrollBtn, styles.leftScrollBtn)}>
+        <div className={styles.scrollBtns}>
+          <div
+            className={classNames(
+              styles.scrollBtnBg,
+              styles.leftScrollBtnBG,
+              showScrollLeft ? styles.visible : styles.hidden
+            )}
+          >
+            <button
+              className={classNames(styles.scrollBtn)}
+              onClick={scrollToLeft}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -31,7 +82,18 @@ function Trending() {
                 ></path>
               </svg>
             </button>
-            <button className={classNames(styles.scrollBtn, styles.rightScrollBtn)}>
+          </div>
+          <div
+            className={classNames(
+              styles.scrollBtnBg,
+              styles.rightScrollBtnBG,
+              showScrollRight ? styles.visible : styles.hidden
+            )}
+          >
+            <button
+              className={classNames(styles.scrollBtn, styles.rightScrollBtn)}
+              onClick={scrollToRight}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -51,6 +113,20 @@ function Trending() {
               </svg>
             </button>
           </div>
+        </div>
+        <ul ref={scrollListRef}>
+          <li>
+            <TrendingCard />
+          </li>
+          <li>
+            <TrendingCard />
+          </li>
+          <li>
+            <TrendingCard />
+          </li>
+          <li>
+            <TrendingCard />
+          </li>
           <li>
             <TrendingCard />
           </li>

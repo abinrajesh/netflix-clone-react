@@ -3,15 +3,16 @@
   margin-bottom: 30px;
   width: 100%;
   color: white;
-
-  position: relative;
 }
 .trendingHeader h3 {
   font-size: 24px;
 }
+.trendingContent {
+  position: relative;
+}
 .trendingContent ul {
   list-style-type: none;
-  padding: 20px 0;
+  padding: 20px;
   display: flex;
   gap: 30px;
   overflow-x: scroll;
@@ -20,30 +21,46 @@
 }
 .scrollBtns {
   width: 100%;
-  height: 270px;
+  height: 310px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  position: absolute;
+}
+.scrollBtnBg {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  padding: 0 15px;
+  z-index: 10;
 }
 .scrollBtn {
-  height: 50%;
-  width: 25px;
+  height: 40%;
   border-radius: 10px;
   background-color: hsla(0, 0%, 10%, 1);
   border: none;
   color: white;
-  position: absolute;
 }
 .scrollBtn:hover {
   background-color: hsla(0, 0%, 5%, 1);
 }
 
-.leftScrollBtn {
-  left: 0;
-  z-index: 9;
+.leftScrollBtnBG {
+  left: -10px;
 }
-.rightScrollBtn {
-  right: 0;
-  z-index: 9;
+.rightScrollBtnBG {
+  right: -10px;
+}
+.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease-in-out;
+}
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
 }

@@ -2,11 +2,11 @@ import React from "react";
 import styles from "./FaqCard.module.css";
 import classNames from "classnames";
 
-function FaqCard() {
+function FaqCard({ isActive, onToggle, title, content }) {
   return (
     <div className={classNames(styles.faqCardContainer)}>
-      <button className={classNames(styles.faqCard)}>
-        FaqCard{" "}
+      <button className={classNames(styles.faqCard)} onClick={onToggle}>
+        {title}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -16,7 +16,9 @@ function FaqCard() {
           height="36"
           data-icon="PlusLarge"
           aria-hidden="true"
-          class="default-ltr-cache-1ulhx3w e164gv2o4"
+          className={classNames(styles.faqPlusSvg, {
+            [styles.faqCrossSvgActive]: isActive,
+          })}
         >
           <path
             fill-rule="evenodd"
@@ -26,8 +28,12 @@ function FaqCard() {
           ></path>
         </svg>
       </button>
-      <div className={classNames(styles.faqCardcontent)}>
-        
+      <div
+        className={classNames(styles.faqCardcontent, {
+          [styles.faqCardcontentActive]: isActive,
+        })}
+      >
+        <span dangerouslySetInnerHTML={{ __html: content }}></span>
       </div>
     </div>
   );
