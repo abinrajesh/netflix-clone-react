@@ -1,9 +1,11 @@
 .banner {
   position: relative;
-  background: url("/src/assets/BannerEnglish.jpg");
   height: 97vh;
   color: white;
   overflow: hidden;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .bannerOverlay {
   position: absolute;

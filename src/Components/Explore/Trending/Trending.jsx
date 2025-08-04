@@ -1,14 +1,28 @@
 import React, { useEffect, useRef, useState } from "react";
+import { API_KEY } from "../../../Constants/Constants";
 import styles from "./Trending.module.css";
 import TrendingCard from "./TrendingCard/TrendingCard";
 import classNames from "classnames";
+import axios from "../../../axios";
 
 function Trending() {
   const [showScrollLeft, setShowScrollLeft] = useState(false);
   const [showScrollRight, setShowScrollRight] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [trending, setTrending] = useState([]);
 
   const scrollListRef = useRef(null);
+  useEffect(() => {
+    axios
+      .get(`/3/discover/tv?api_key=${API_KEY}&with_networks=213`)
+      .then((response) => {
+        setTrending(response.data.results);
+        console.log(response.data.results);
+        
+      })
+      .catch((err) => {
+        // alert("Network error");
+      });
+  }, []);
 
   useEffect(() => {
     const el = scrollListRef.current;
@@ -24,7 +38,9 @@ function Trending() {
     };
 
     if (el) {
-      handleScroll();
+      setTimeout(() => {
+        handleScroll();
+      }, 0);
     }
 
     el.addEventListener("scroll", handleScroll);
@@ -32,7 +48,7 @@ function Trending() {
     return () => {
       el.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [trending]);
 
   const scrollToLeft = () => {
     if (scrollListRef.current) {
@@ -115,36 +131,12 @@ function Trending() {
           </div>
         </div>
         <ul ref={scrollListRef}>
-          <li>
-            <TrendingCard />
-          </li>
-          <li>
-            <TrendingCard />
-          </li>
-          <li>
-            <TrendingCard />
-          </li>
-          <li>
-            <TrendingCard />
-          </li>
-          <li>
-            <TrendingCard />
-          </li>
-          <li>
-            <TrendingCard />
-          </li>
-          <li>
-            <TrendingCard />
-          </li>
-          <li>
-            <TrendingCard />
-          </li>
-          <li>
-            <TrendingCard />
-          </li>
-          <li>
-            <TrendingCard />
-          </li>
+          {trending &&
+            trending.slice(0, 10).map((obj, index) => (
+              <li key={index}>
+                <TrendingCard index={index} poster_path={obj.poster_path}/>
+              </li>
+            ))}
         </ul>
       </div>
     </div>

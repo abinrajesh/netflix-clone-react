@@ -19,6 +19,11 @@
   scrollbar-width: none;
   scroll-behavior: smooth;
 }
+
+.trendingContent ul li {
+  flex-shrink: 0;
+}
+
 .scrollBtns {
   width: 100%;
   height: 310px;

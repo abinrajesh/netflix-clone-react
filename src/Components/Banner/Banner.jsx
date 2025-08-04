@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { API_KEY, imageUrl } from "../../Constants/Constants";
 import styles from "./Banner.module.css";
 import NavBar from "../NavBar/NavBar";
 import BannerEmailSignUp from "../EmailSignUp/EmailSignUp";
 import classNames from "classnames";
+import axios from "../../axios";
 
 function Banner() {
+  const [movie, setMovie] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get(`/3/discover/tv?api_key=${API_KEY}&with_networks=213`)
+      .then((response) => {
+        const randomIndex = Math.floor(Math.random() * 10);
+        setMovie(response.data.results[randomIndex]);
+      });
+  }, []);
+
   return (
-    <div className={classNames(styles.banner)}>
+    <div
+      className={classNames(styles.banner)}
+      style={{
+        backgroundImage: `url(${movie ? imageUrl + movie.backdrop_path : ""} )`,
+      }}
+    >
       <div className={classNames(styles.bannerOverlay)}></div>
       <NavBar />
       <div className={classNames(styles.bannerContentContainer)}>
