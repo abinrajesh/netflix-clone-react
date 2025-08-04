@@ -16,6 +16,7 @@
   display: flex;
   gap: 30px;
   overflow-x: scroll;
+  overflow-y: hidden;
   scrollbar-width: none;
   scroll-behavior: smooth;
 }

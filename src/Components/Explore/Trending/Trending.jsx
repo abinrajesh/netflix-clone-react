@@ -15,12 +15,10 @@ function Trending() {
     axios
       .get(`/3/discover/tv?api_key=${API_KEY}&with_networks=213`)
       .then((response) => {
-        setTrending(response.data.results);
-        console.log(response.data.results);
-        
+        setTrending(response.data.results);        
       })
       .catch((err) => {
-        // alert("Network error");
+        alert("Network error");
       });
   }, []);
 
