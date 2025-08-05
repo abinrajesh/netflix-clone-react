@@ -1,5 +1,5 @@
 .previewModalBgOverlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -47,6 +47,20 @@
     linear-gradient(0deg, rgb(22, 22, 22) 15%, rgba(6, 10, 23, 0) 69.26%);
 }
 
+.youTubeVideoWrapper {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: fit-content;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.previewModalPoster:hover .youTubeVideoWrapper {
+  display: flex;
+}
 .PreviewTitle {
   position: absolute;
   z-index: 999;
@@ -86,6 +100,13 @@
 .previewMovieDescription {
   margin-bottom: 30px;
 }
+.previewMovieDescription p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 550px;
+}
 
 .getStartedBtn {
   display: flex;
@@ -97,6 +118,7 @@
   background-color: red;
   color: white;
   font-weight: normal;
+  cursor: pointer;
 }
 
 .getStartedBtn:hover {

@@ -4,10 +4,12 @@ import { API_KEY } from "../../Constants/Constants";
 import styles from "./PreviewModal.module.css";
 import classNames from "classnames";
 import axios from "../../../src/axios";
+import YouTube from "react-youtube";
 
 function PreviewModal({ onClose, movieDetails }) {
   const [genre, setGenre] = useState([]);
-
+  const [isHowered, setIsHoweverd] = useState(false);
+  const [urlIdYt, setUrlIdYt] = useState("");
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -21,17 +23,60 @@ function PreviewModal({ onClose, movieDetails }) {
       .then((response) => {
         setGenre(response.data.genres);
       });
-  });
+
+    axios
+      .get(`3/tv/${movieDetails.id}/videos?api_key=${API_KEY}`)
+      .then((response) => {
+        if (response.data.results !== 0) {
+          setUrlIdYt(response.data.results[0]);
+        } else {
+          console.log(response.data.results.length);
+        }
+      });
+  }, []);
+
+  const opts = {
+    height: "300",
+    width: "640",
+    playerVars: {
+      autoplay: 1,
+      controls: 0,
+    },
+  };
+
+  const handleMouseEnter = () => {
+    setIsHoweverd(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHoweverd(false);
+  };
+
+  console.log(urlIdYt);
 
   return (
-    <div className={classNames(styles.previewModalBgOverlay)}>
-      <div className={classNames(styles.previewModal)}>
+    <div className={classNames(styles.previewModalBgOverlay)} onClick={onClose}>
+      <div
+        className={classNames(styles.previewModal)}
+        onClick={(e) => e.stopPropagation()}
+      >
         <div
           className={classNames(styles.previewModalPoster)}
           style={{
             backgroundImage: `url(${imageUrl + movieDetails.backdrop_path})`,
           }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
+          <div className={classNames(styles.youTubeVideoWrapper)}>
+            {isHowered && (
+              <YouTube
+                videoId={urlIdYt.key}
+                opts={opts}
+                className={classNames(styles.youTubeEmbed)}
+              />
+            )}
+          </div>
           <div className={classNames(styles.PreviewTitle)}>
             <h1>{movieDetails.name}</h1>
           </div>
