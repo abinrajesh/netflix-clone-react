@@ -1,6 +1,6 @@
 .navBar {
   height: 10vh;
-  width: 87vh;
+  width: 100%;
   padding: 0 2em;
   box-sizing: border-box;
   display: flex;
@@ -42,23 +42,17 @@
   background-color: hsl(0, 100%, 45%);
 }
 
-/* Mobile (phones) */
-@media screen and (max-width: 599px) {
-  .navBar {
-  }
-}
-
 /* Tablet (small landscape/tablet) */
-@media (min-width: 600px) and (max-width: 959px) {
+@media screen and (max-width: 959px) and (min-width: 600px) {
+  
 }
 
 /* Small Desktop / Laptops */
 @media (min-width: 960px) and (max-width: 1279px) {
   .navBar {
-    width: 100vw;
+    width: 100%;
     height: 10vh;
-    padding: 0 150px;
-    padding-top: 20px;
+    padding: 0 2em;
   }
   .navBar .logoContainer svg {
     width: 150px;
