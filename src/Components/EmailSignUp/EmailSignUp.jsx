@@ -2,16 +2,33 @@ import React from "react";
 import styles from "./EmailSignUp.module.css";
 import classNames from "classnames";
 
-function BannerEmailSignUp() {
+function BannerEmailSignUp({ isFromExplore }) {
   return (
-    <div className={classNames(styles.emailSignup)}>
+    <div
+      className={classNames({
+        [styles.exploreEmailSignup]: isFromExplore,
+        [styles.emailSignup]: !isFromExplore,
+      })}
+    >
       <h3>
         Ready to watch? Enter your email to create or restart your membership.
       </h3>
-      <form action="" className={classNames(styles.emailSignupForm)}>
+      <form
+        action=""
+        className={classNames({
+          [styles.exploreEmailSignupForm]: isFromExplore,
+          [styles.emailSignupForm]: !isFromExplore,
+        })}
+      >
         <div className={classNames(styles.emailInputSection)}>
-          <input type="email" className={classNames(styles.emailSignupInput)} required/>
-          <p className={classNames(styles.emailInputPlaceholder)}>Email address</p>
+          <input
+            type="email"
+            className={classNames(styles.emailSignupInput)}
+            required
+          />
+          <p className={classNames(styles.emailInputPlaceholder)}>
+            Email address
+          </p>
         </div>
         <button className={classNames(styles.getStartedBtn)}>
           Get Started

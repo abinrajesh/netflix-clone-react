@@ -4,6 +4,12 @@
   color: rgb(0, 0, 0);
   position: relative;
 }
+.footerLanguageSelector {
+  display: flex;
+  align-items: center;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
 
 .languageSvg {
   position: absolute;
@@ -12,23 +18,23 @@
 }
 
 .languageSvgLeft {
-  left: 10px;
-  top: 6px;
+  left: 0.8em;
+  top: 0.5em;
 }
 
 .languageSvgRight {
-  right: 10px;
-  top: 6px;
+  right: 0.8em;
+  top: 0.5em;
 }
 
-.languageSelector select {
+select {
   outline: none;
   border-radius: 5px;
   box-shadow: 0 0 0 0.1px white;
   background-color: transparent;
-  color: white;
+  color: transparent;
   width: 100%;
-  padding: 2px 30px;
+  padding: 0.2em 0.2em;
   font-size: 0.9rem;
   line-height: 1.5rem;
   font-weight: 600;
@@ -36,7 +42,36 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+.footerLanguageSelector select {
+  color: white;
+  padding: 0.2em 2.3em;
+}
 
 .languageSelector select option {
   color: black;
+}
+.footerLanguageSelector select option {
+  color: black;
+}
+
+/* Mobile (phones) */
+@media (max-width: 599px) {
+  
+}
+
+/* Tablet (small landscape/tablet) */
+@media (min-width: 600px) and (max-width: 959px) {
+  
+}
+
+/* Small Desktop / Laptops */
+@media (min-width: 960px) and (max-width: 1279px) {
+ .languageSelector select {
+  padding: 2px 30px;
+ }
+}
+
+/* Large Desktops / TVs */
+@media (min-width: 1280px) {
+  
 }

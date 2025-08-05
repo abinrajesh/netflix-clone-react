@@ -2,9 +2,13 @@ import React from "react";
 import styles from "./LanguageSelector.module.css";
 import classNames from "classnames";
 
-function LanguageSelector() {
+function LanguageSelector({ isFromFooter }) {
   return (
-    <div className={classNames(styles.languageSelector)}>
+    <div
+      className={classNames(
+        isFromFooter ? styles.footerLanguageSelector : styles.languageSelector
+      )}
+    >
       <div className={classNames(styles.languageSvg, styles.languageSvgLeft)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"

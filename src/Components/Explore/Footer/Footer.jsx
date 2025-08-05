@@ -71,7 +71,7 @@ function Footer() {
         </ul>
       </div>
       <div className={classNames(styles.languageSelectorContainer)}>
-        <LanguageSelector />
+        <LanguageSelector isFromFooter={true}/>
       </div>
       <div className={classNames(styles.companyName)}>
         <p>Netflix India</p>

@@ -1,20 +1,20 @@
 .trendingSection {
-  margin-top: 10px;
+  margin-top: 0.5rem;
   margin-bottom: 30px;
   width: 100%;
   color: white;
 }
 .trendingHeader h3 {
-  font-size: 24px;
+  font-size: 1.2rem;
 }
 .trendingContent {
   position: relative;
 }
 .trendingContent ul {
   list-style-type: none;
-  padding: 20px;
+  padding: 1em;
   display: flex;
-  gap: 30px;
+  gap: 1.2em;
   overflow-x: scroll;
   overflow-y: hidden;
   scrollbar-width: none;
@@ -27,11 +27,11 @@
 
 .scrollBtns {
   width: 100%;
-  height: 310px;
+  height: 12rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 0.5em;
   position: absolute;
 }
 .scrollBtnBg {
@@ -39,13 +39,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90%;
-  padding: 0 15px;
+  height: 100%;
+  padding: 0 0.5rem;
   z-index: 10;
 }
 .scrollBtn {
-  height: 40%;
-  border-radius: 10px;
+  height: 60%;
+  border-radius: 8px;
   background-color: hsla(0, 0%, 10%, 1);
   border: none;
   color: white;
@@ -55,10 +55,10 @@
 }
 
 .leftScrollBtnBG {
-  left: -10px;
+  left: -1em;
 }
 .rightScrollBtnBG {
-  right: -10px;
+  right: -1em;
 }
 .visible {
   opacity: 1;
@@ -69,4 +69,70 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
+}
+
+/* Mobile (phones) */
+@media (max-width: 599px) {
+}
+
+/* Tablet (small landscape/tablet) */
+@media (min-width: 600px) and (max-width: 959px) {
+}
+
+/* Small Desktop / Laptops */
+@media (min-width: 960px) and (max-width: 1279px) {
+  .trendingSection {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    color: white;
+  }
+  .trendingHeader h3 {
+    font-size: 24px;
+  }
+  .trendingContent ul {
+    list-style-type: none;
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+  .scrollBtns {
+    width: 100%;
+    height: 310px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+  }
+  .scrollBtnBg {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    padding: 0 15px;
+    z-index: 10;
+  }
+  .scrollBtn {
+    height: 40%;
+    border-radius: 10px;
+    background-color: hsla(0, 0%, 10%, 1);
+    border: none;
+    color: white;
+  }
+  .leftScrollBtnBG {
+    left: -10px;
+  }
+  .rightScrollBtnBG {
+    right: -10px;
+  }
+}
+
+/* Large Desktops / TVs */
+@media (min-width: 1280px) {
 }

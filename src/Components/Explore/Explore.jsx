@@ -3,7 +3,7 @@ import styles from "./Explore.module.css";
 import Trending from "./Trending/Trending";
 import Features from "./Features/Features";
 import Faq from "./Faq/Faq";
-import BannerEmailSignUp from "../EmailSignUp/EmailSignUp";
+import EmailSignUp from "../EmailSignUp/EmailSignUp";
 import Footer from "./Footer/Footer";
 function Explore() {
   return (
@@ -11,7 +11,7 @@ function Explore() {
       <Trending />
       <Features />
       <Faq />
-      <BannerEmailSignUp />
+      <EmailSignUp isFromExplore={true}/>
       <Footer />
     </div>
   );

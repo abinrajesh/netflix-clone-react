@@ -1,54 +1,79 @@
 .emailSignup {
-  margin-top: 30px;
+  min-width: 33.7rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.emailSignup h3 {
+.exploreEmailSignup {
+  min-width: 30rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.emailSignup h3,
+.exploreEmailSignup h3 {
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
 }
 .emailSignupForm {
-  margin-top: 20px;
+  width: 100%;
+  margin-top: 1.5em;
   display: flex;
-  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+.exploreEmailSignupForm {
+  width: 100%;
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
 }
 .emailInputSection {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 .emailInputSection .emailSignupInput {
   background-color: hsla(0, 0%, 3%, 0.5);
   box-shadow: 0 0 0 0.3px white;
-  border: none;
-  border-radius: 4px;
-  min-width: 400px;
-  padding: 30px 25px;
-  padding-bottom: 15px;
-  box-sizing: border-box;
   color: white;
-  font-size: 16px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  min-width: 33.7rem;
+  padding: 1.5rem 1rem;
+  padding-bottom: 0.7rem;
+  font-size: 1rem;
 }
 .emailInputPlaceholder {
   position: absolute;
-  top: 30px;
-  left: 25px;
-  transform: translateY(-50%);
+  font-size: 1rem;
+  top: 1.5rem;
+  left: 2em;
   color: #aaa;
+  transform: translateY(-30%);
   transition: all 0.2s ease;
   pointer-events: none;
-  font-size: 16px;
 }
 .emailSignupInput:focus + .emailInputPlaceholder {
-  top: 20px;
-  font-size: 10px;
+  left: 1.7rem;
+  top: 1rem;
+  font-size: 0.7rem;
 }
 
 .getStartedBtn {
+  text-align: center;
   display: flex;
   align-items: center;
-  padding: 15px 25px;
-  font-size: 1.4rem;
+  width: 10.5rem;
+  padding: 0.7rem 0.7rem;
+  font-size: 1.2rem;
   border-radius: 4px;
   border: none;
   background-color: red;
@@ -60,4 +85,53 @@
 }
 .getStartedBtn svg {
   margin-left: 10px;
+}
+
+/* Mobile (phones) */
+@media (max-width: 599px) {
+}
+
+/* Tablet (small landscape/tablet) */
+@media (min-width: 600px) and (max-width: 959px) {
+}
+
+/* Small Desktop / Laptops */
+@media (min-width: 960px) and (max-width: 1279px) {
+  .emailSignup {
+    margin-top: 30px;
+  }
+  .emailSignup h3 {
+    font-size: 16px;
+  }
+  .emailSignupForm {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  .emailInputSection .emailSignupInput {
+    min-width: 400px;
+    padding: 30px 25px;
+    padding-bottom: 15px;
+    font-size: 16px;
+  }
+  .emailInputPlaceholder {
+    font-size: 16px;
+    top: 30px;
+    left: 25px;
+    transform: translateY(-50%);
+  }
+  .emailSignupInput:focus + .emailInputPlaceholder {
+    top: 20px;
+    font-size: 10px;
+  }
+  .getStartedBtn {
+    padding: 15px 25px;
+  }
+  .getStartedBtn svg {
+    margin-left: 10px;
+  }
+}
+
+/* Large Desktops / TVs */
+@media (min-width: 1280px) {
 }

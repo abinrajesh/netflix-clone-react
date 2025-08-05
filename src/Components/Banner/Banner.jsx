@@ -34,7 +34,7 @@ function Banner() {
             <p>Starts at ₹149. Cancel at any time.</p>
           </div>
           <div className={classNames(styles.bannerEmailSignup)}>
-            <BannerEmailSignUp />
+            <BannerEmailSignUp isFromExplore={false}/>
           </div>
         </div>
       </div>

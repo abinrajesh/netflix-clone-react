@@ -1,41 +1,41 @@
 .footerSection {
-  margin-top: 70px;
+  margin-top: 5em;
   width: 100%;
-  height: 500px;
+  height: 50em;
   color: rgba(255, 255, 255, 0.7);
 }
 .contactNumberContainer > p > span > a {
   color: rgba(255, 255, 255, 0.7);
 }
 .footerLinksContainer ul {
-  margin-top: 50px;
+  margin-top: 3em;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 .footerLinksContainer ul li {
-  padding: 0 0 10px 0;
-  width: 300px;
+  padding: 0 0 0.8em 0;
+  width: 20em;
 }
 .footerLinksContainer ul li a {
   color: rgba(255, 255, 255, 0.7);
-  height: 10px;
-  width: 20px;
-  font-size: 14px;
+  height: 0.5em;
+  width: 1em;
+  font-size: 1rem;
 }
 .languageSelectorContainer {
-  margin-top: 50px;
-  width: 120px;
+  margin-top: 3em;
+  width: 8em;
 }
 
 .companyName {
-  margin-top: 50px;
+  margin-top: 3em;
 }
 
 .captchaInfoContainer {
-  margin-top: 50px;
-  font-size: 13px;
+  margin-top: 3em;
+  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.5);
 }
 .captchaInfoBtn {
@@ -45,9 +45,78 @@
   color: rgb(68, 142, 244);
 }
 .captchaInfoHidden {
-  margin-top: 20px;
+  margin-top: 2em;
   opacity: 0;
 }
 .captchaInfoHidden a:visited {
   color: rgba(255, 255, 255, 0.5);
+}
+
+/* Mobile (phones) */
+@media (max-width: 599px) {
+}
+
+/* Tablet (small landscape/tablet) */
+@media (min-width: 600px) and (max-width: 959px) {
+}
+
+/* Small Desktop / Laptops */
+@media (min-width: 960px) and (max-width: 1279px) {
+  .footerSection {
+    margin-top: 70px;
+    width: 100%;
+    height: 500px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .contactNumberContainer > p > span > a {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .footerLinksContainer ul {
+    margin-top: 50px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .footerLinksContainer ul li {
+    padding: 0 0 10px 0;
+    width: 300px;
+  }
+  .footerLinksContainer ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    height: 10px;
+    width: 20px;
+    font-size: 14px;
+  }
+  .languageSelectorContainer {
+    margin-top: 50px;
+    width: 120px;
+  }
+
+  .companyName {
+    margin-top: 50px;
+  }
+
+  .captchaInfoContainer {
+    margin-top: 50px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .captchaInfoBtn {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    color: rgb(68, 142, 244);
+  }
+  .captchaInfoHidden {
+    margin-top: 20px;
+    opacity: 0;
+  }
+  .captchaInfoHidden a:visited {
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Large Desktops / TVs */
+@media (min-width: 1280px) {
 }

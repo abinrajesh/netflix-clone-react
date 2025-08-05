@@ -1,29 +1,68 @@
 .featureCard {
-  height: 290px;
-  width: 290px;
+  height: 12rem;
+  width: 100%;
+  min-width: 34rem;
+  padding: 1em;
   border: none;
   border-radius: 20px;
   background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
   box-sizing: border-box;
-  padding: 20px;
   position: relative;
 }
 .feaureCardHeader {
-  margin-top: 10px;
+  margin-top: 0.5em;
 }
 .feaureCardHeader h3 {
-  font-size: 23px;
+  font-size: 1.2rem;
 }
 .featureCardDescription {
-  margin-top: 20px;
+  margin-top: 1em;
 }
 .featureCardDescription p {
-  font-size: 16px;
+  font-size: 1rem;
   color: #bbbabf;
   font-weight: 500;
 }
 .featureSvgContainer {
-    position: absolute;
+  position: absolute;
+  right: 0.5em;
+  bottom: 0.5em;
+}
+
+/* Mobile (phones) */
+@media (max-width: 599px) {
+}
+
+/* Tablet (small landscape/tablet) */
+@media (min-width: 600px) and (max-width: 959px) {
+}
+
+/* Small Desktop / Laptops */
+@media (min-width: 960px) and (max-width: 1279px) {
+  .featureCard {
+    height: 290px;
+    width: 290px;
+    padding: 20px;
+  }
+  .feaureCardHeader {
+    margin-top: 10px;
+  }
+  .feaureCardHeader h3 {
+    font-size: 23px;
+  }
+  .featureCardDescription {
+    margin-top: 20px;
+  }
+  .featureCardDescription p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .featureSvgContainer {
     right: 10px;
     bottom: 10px;
+  }
+}
+
+/* Large Desktops / TVs */
+@media (min-width: 1280px) {
 }

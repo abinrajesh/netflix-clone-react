@@ -15,10 +15,10 @@
 }
 
 .previewModal {
-  width: 640px;
-  height: 600px;
+  width: 100%;
+  height: 72%;
   box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
+  border-radius: 7px;
   background: rgb(22, 22, 22);
   position: relative;
 }
@@ -27,10 +27,9 @@
   border-radius: 10px;
   height: 60%;
   width: 100%;
-  padding: 20px;
   box-sizing: border-box;
   background-position: top;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -38,7 +37,7 @@
 .previewModalPoster::after {
   content: "";
   position: absolute;
-  inset: 0px;
+  inset: 0;
   background: linear-gradient(
       40deg,
       rgb(22, 22, 22) 24.16%,
@@ -48,13 +47,13 @@
 }
 
 .youTubeVideoWrapper {
+  height: 100%;
   display: none;
   position: absolute;
   top: 0;
   left: 0;
   overflow: hidden;
   width: fit-content;
-  height: 300px;
   border-radius: 10px;
 }
 
@@ -65,7 +64,7 @@
   position: absolute;
   z-index: 999;
   bottom: 0;
-  left: 40px;
+  left: 1em;
 }
 
 .PreviewTitle h1 {
@@ -74,44 +73,50 @@
 }
 
 .previewModalContent {
+  padding-left: 3em;
+  padding: 1.7em 1em;
   background: rgb(22, 22, 22);
   color: rgba(255, 255, 255, 0.7);
   height: 40%;
   width: 100%;
-  padding: 20px;
-  padding-left: 40px;
   box-sizing: border-box;
   border-radius: 10px;
 }
 
 .previewModalContent ul {
+  gap: 0.5em;
+  padding-bottom: 2em;
   display: flex;
   list-style-type: none;
-  gap: 10px;
-  padding-bottom: 30px;
 }
 
 .previewModalContent ul li {
+  font-size: 0.7rem;
+  padding: 0.5em;
   background-color: rgb(65, 65, 65);
-  border-radius: 4px;
-  padding: 5px;
+  border-radius: 3px;
 }
 
 .previewMovieDescription {
-  margin-bottom: 30px;
+  margin-bottom: 1.8em;
 }
 .previewMovieDescription p {
+  max-width: 50rem;
+  font-size: 0.9rem;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* Limit to 2 lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
-  max-width: 550px;
 }
 
 .getStartedBtn {
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 15px 25px;
+  width: 100%;
+  padding: 0.2em 0;
+  display: flex;
+  align-items: center;
   font-size: 1.2rem;
   border-radius: 4px;
   border: none;
@@ -126,21 +131,21 @@
 }
 
 .getStartedBtn svg {
-  margin-left: 10px;
+  margin-left: 0.5em;
 }
 
 .previewClose {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 1em;
+  right: 1em;
 }
 
 .previewClose button {
+  padding: 8px;
   background-color: transparent;
   border-radius: 50%;
   border: none;
   outline: none;
-  padding: 8px;
   color: white;
   display: flex;
   transition-duration: 250ms;
@@ -151,4 +156,63 @@
 .previewClose button:hover {
   background-color: rgba(128, 128, 128, 0.4);
   transition-timing-function: cubic-bezier(0.32, 0.94, 0.6, 1);
+}
+
+/* Mobile (phones) */
+@media (max-width: 599px) {
+}
+
+/* Tablet (small landscape/tablet) */
+@media (min-width: 600px) and (max-width: 959px) {
+}
+
+/* Small Desktop / Laptops */
+@media (min-width: 960px) and (max-width: 1279px) {
+  .previewModal {
+    width: 640px;
+    height: 600px;
+  }
+  .youTubeVideoWrapper {
+    height: 300px;
+  }
+  .PreviewTitle {
+    left: 40px;
+  }
+  .previewModalContent {
+    padding: 20px;
+    padding-left: 40px;
+  }
+  .previewModalContent ul {
+    gap: 10px;
+    padding-bottom: 30px;
+  }
+  .previewModalContent ul li {
+    padding: 5px;
+  }
+
+  .previewMovieDescription {
+    margin-bottom: 30px;
+  }
+  .previewMovieDescription p {
+    max-width: 550px;
+  }
+  .getStartedBtn {
+    padding: 15px 25px;
+  }
+  .getStartedBtn svg {
+    margin-left: 10px;
+  }
+
+  .previewClose {
+    top: 20px;
+    right: 20px;
+  }
+
+  .previewClose button {
+    padding: 8px;
+  }
+}
+
+/* Large Desktops / TVs */
+@media (min-width: 1280px) {
 }

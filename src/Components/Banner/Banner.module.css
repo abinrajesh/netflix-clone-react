@@ -1,9 +1,10 @@
 .banner {
   position: relative;
-  height: 97vh;
+  height: 85vh;
+  width: 100vw;
   color: white;
   overflow: hidden;
-  background-position:center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -11,8 +12,8 @@
   position: absolute;
   top: 0;
   background-color: hsla(0, 0%, 0%, 0.7);
-  height: 97vh;
-  width: 100vw;
+  height: 85vh;
+  width: 100%;
   z-index: 1;
 }
 
@@ -25,21 +26,23 @@
 }
 
 .bannerContent {
-  width: 50%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bannerHeader {
-  margin-top: 20%;
+  margin-top: 13%;
   text-align: center;
 }
 .bannerHeader h1 {
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 .bannerHeader p {
-  margin-top: 30px;
-  font-size: 20px;
-  font-weight: bold;
+  margin-top: 0.7em;
+  font-size: 1rem;
 }
 .bannerCurveContainer {
   display: flex;
@@ -80,4 +83,40 @@
   border-top-left-radius: 50% 100%;
   border-top-right-radius: 50% 100%;
   overflow: hidden;
+}
+
+/* Mobile (phones) */
+@media (max-width: 599px) {
+}
+
+/* Tablet (small landscape/tablet) */
+@media (min-width: 600px) and (max-width: 959px) {
+}
+
+/* Small Desktop / Laptops */
+@media (min-width: 960px) and (max-width: 1279px) {
+  .banner {
+    height: 97vh;
+  }
+  .bannerOverlay {
+    height: 97vh;
+  }
+  .bannerContent {
+    width: 50%;
+  }
+  .bannerHeader h1 {
+    font-size: 4rem;
+  }
+  .bannerHeader {
+    margin-top: 20%;
+  }
+  .bannerHeader p {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+/* Large Desktops / TVs */
+@media (min-width: 1280px) {
 }
