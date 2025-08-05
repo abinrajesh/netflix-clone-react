@@ -1,21 +1,24 @@
 import React, { useEffect, useRef, useState } from "react";
 import { API_KEY } from "../../../Constants/Constants";
+import axios from "../../../axios";
+import classNames from "classnames";
 import styles from "./Trending.module.css";
 import TrendingCard from "./TrendingCard/TrendingCard";
-import classNames from "classnames";
-import axios from "../../../axios";
+import PreviewModal from "../../PreviewModal/PreviewModal";
 
 function Trending() {
   const [showScrollLeft, setShowScrollLeft] = useState(false);
   const [showScrollRight, setShowScrollRight] = useState(false);
   const [trending, setTrending] = useState([]);
+  const [isPosterClicked, setIsPosterClicked] = useState(false);
+  const [previewMovieDetals, setPreviewMovieDetails] = useState("");
 
   const scrollListRef = useRef(null);
   useEffect(() => {
     axios
       .get(`/3/discover/tv?api_key=${API_KEY}&with_networks=213`)
       .then((response) => {
-        setTrending(response.data.results);        
+        setTrending(response.data.results);
       })
       .catch((err) => {
         alert("Network error");
@@ -58,6 +61,15 @@ function Trending() {
     if (scrollListRef.current) {
       scrollListRef.current.scrollLeft = scrollListRef.current.scrollWidth;
     }
+  };
+
+  const handlePreviewModal = (index, obj) => {
+    setIsPosterClicked(true);
+    setPreviewMovieDetails(obj);
+  };
+
+  const handlePreviewClose = () => {
+    setIsPosterClicked(false);
   };
 
   return (
@@ -132,11 +144,21 @@ function Trending() {
           {trending &&
             trending.slice(0, 10).map((obj, index) => (
               <li key={index}>
-                <TrendingCard index={index} poster_path={obj.poster_path}/>
+                <TrendingCard
+                  index={index}
+                  poster_path={obj.poster_path}
+                  PosterClick={() => handlePreviewModal(index, obj)}
+                />
               </li>
             ))}
         </ul>
       </div>
+      {isPosterClicked && (
+        <PreviewModal
+          onClose={handlePreviewClose}
+          movieDetails={previewMovieDetals}
+        />
+      )}
     </div>
   );
 }

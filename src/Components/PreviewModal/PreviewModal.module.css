@@ -1,0 +1,132 @@
+.previewModalBgOverlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  transition: opacity 250ms cubic-bezier(0.32, 0.94, 0.6, 1) 67ms;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.previewModal {
+  width: 640px;
+  height: 600px;
+  box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  background: rgb(22, 22, 22);
+  position: relative;
+}
+
+.previewModalPoster {
+  border-radius: 10px;
+  height: 60%;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.previewModalPoster::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(
+      40deg,
+      rgb(22, 22, 22) 24.16%,
+      rgba(6, 10, 23, 0) 56.61%
+    ),
+    linear-gradient(0deg, rgb(22, 22, 22) 15%, rgba(6, 10, 23, 0) 69.26%);
+}
+
+.PreviewTitle {
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  left: 40px;
+}
+
+.PreviewTitle h1 {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.previewModalContent {
+  background: rgb(22, 22, 22);
+  color: rgba(255, 255, 255, 0.7);
+  height: 40%;
+  width: 100%;
+  padding: 20px;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.previewModalContent ul {
+  display: flex;
+  list-style-type: none;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+.previewModalContent ul li {
+  background-color: rgb(65, 65, 65);
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.previewMovieDescription {
+  margin-bottom: 30px;
+}
+
+.getStartedBtn {
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  border: none;
+  background-color: red;
+  color: white;
+  font-weight: normal;
+}
+
+.getStartedBtn:hover {
+  background-color: hsl(0, 100%, 40%);
+}
+
+.getStartedBtn svg {
+  margin-left: 10px;
+}
+
+.previewClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.previewClose button {
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  padding: 8px;
+  color: white;
+  display: flex;
+  transition-duration: 250ms;
+  transition-property: background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.68, 0.06);
+}
+
+.previewClose button:hover {
+  background-color: rgba(128, 128, 128, 0.4);
+  transition-timing-function: cubic-bezier(0.32, 0.94, 0.6, 1);
+}

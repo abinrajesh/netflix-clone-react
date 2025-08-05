@@ -6,6 +6,7 @@ function App() {
     <div className={styles.appWrapper}>
       <Banner />
       <Explore />
+      
     </div>
   );
 }
