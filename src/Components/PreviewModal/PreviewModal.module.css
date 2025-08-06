@@ -3,6 +3,8 @@
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   height: 100vh;
   width: 100vw;
   z-index: 1999;
@@ -49,6 +51,7 @@
 
 .youTubeVideoWrapper {
   height: 100%;
+  width: 100%;
   display: none;
   position: absolute;
   top: 0;
@@ -57,10 +60,13 @@
   width: fit-content;
   border-radius: 10px;
 }
-
+.youTubeVideoWrapper > div {
+  width: 40em;
+}
 .previewModalPoster:hover .youTubeVideoWrapper {
   display: flex;
 }
+
 .PreviewTitle {
   position: absolute;
   z-index: 999;
@@ -105,7 +111,7 @@
   max-width: 50rem;
   font-size: 0.9rem;
   display: -webkit-box;
-  -webkit-line-clamp: 2; 
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -168,6 +174,9 @@
   .youTubeVideoWrapper {
     height: 18.75em;
   }
+  .youTubeVideoWrapper > div {
+    width: 40em;
+  }
   .PreviewTitle {
     left: 2.5em;
   }
@@ -219,6 +228,9 @@
   .youTubeVideoWrapper {
     height: 18.75em;
   }
+  .youTubeVideoWrapper > div {
+    width: 40em;
+  }
   .PreviewTitle {
     left: 2.5em;
   }
@@ -269,6 +281,9 @@
   }
   .youTubeVideoWrapper {
     height: 18.75em;
+  }
+  .youTubeVideoWrapper > div {
+    width: 40em;
   }
   .PreviewTitle {
     left: 2.5em;
