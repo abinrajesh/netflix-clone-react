@@ -11,8 +11,8 @@ function NavBar() {
           <svg
             viewBox="0 0 111 30"
             version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns="https://www.w3.org/2000/svg"
+            xmlns:xlink="https://www.w3.org/1999/xlink"
             aria-hidden="true"
             role="img"
             class="default-ltr-cache-1d568uk ev1dnif2"
@@ -26,7 +26,7 @@ function NavBar() {
       <div className={classNames(styles.navBarActionControls)}>
         <LanguageSelector />
         <div className={classNames(styles.signIn)}>
-          <a href="https://www.netflix.com/in/login" className={classNames(styles.signInBtn)}>Sign In</a>
+          <a href="" className={classNames(styles.signInBtn)}>Sign In</a>
         </div>
       </div>
     </div>

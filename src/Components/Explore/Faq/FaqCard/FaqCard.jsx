@@ -8,7 +8,7 @@ function FaqCard({ isActive, onToggle, title, content }) {
       <button className={classNames(styles.faqCard)} onClick={onToggle}>
         {title}
         <svg
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="https://www.w3.org/2000/svg"
           fill="none"
           role="img"
           viewBox="0 0 36 36"

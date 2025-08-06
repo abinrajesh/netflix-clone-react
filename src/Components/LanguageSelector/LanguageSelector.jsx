@@ -11,7 +11,7 @@ function LanguageSelector({ isFromFooter }) {
     >
       <div className={classNames(styles.languageSvg, styles.languageSvgLeft)}>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="https://www.w3.org/2000/svg"
           fill="none"
           role="img"
           viewBox="0 0 16 16"
@@ -34,7 +34,7 @@ function LanguageSelector({ isFromFooter }) {
       </select>
       <div className={classNames(styles.languageSvg, styles.languageSvgRight)}>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="https://www.w3.org/2000/svg"
           fill="none"
           role="img"
           viewBox="0 0 16 16"
