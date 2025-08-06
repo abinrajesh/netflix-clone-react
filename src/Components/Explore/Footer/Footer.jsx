@@ -1,7 +1,7 @@
 import React, { createRef, useRef } from "react";
 import styles from "./Footer.module.css";
 import classNames from "classnames";
-import LanguageSelector from "/Users/tempadmin/Desktop/React Practice Workspace/netflix-clone-react/src/Components/LanguageSelector/LanguageSelector";
+import LanguageSelector from '../../LanguageSelector/LanguageSelector'
 
 function Footer() {
   const hiddenCatpchaRef = createRef(null);
