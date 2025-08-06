@@ -32,19 +32,6 @@ A fully responsive Netflix clone built using **React.js**, styled with **CSS**, 
 
 ---
 
-## 📁 Folder Structure
-src/
-├── Components/
-│ ├── Navbar/
-│ ├── Banner/
-│ ├── RowPost/
-│ ├── PreviewModal/
-│ └── LanguageSelector/
-├── Constants/
-└── App.jsx
-
----
-
 ## 📦 Setup & Installation
 
 ```bash
