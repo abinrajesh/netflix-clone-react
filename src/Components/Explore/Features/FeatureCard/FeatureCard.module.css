@@ -1,18 +1,19 @@
 .featureCard {
-  height: 12rem;
+  /* min-height: 12rem; */
   width: 100%;
-  min-width: 34rem;
   padding: 1em;
+  flex: 1 1 0;
+  padding-bottom: 5rem;
   border: none;
   border-radius: 20px;
   background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
   box-sizing: border-box;
   position: relative;
 }
-.feaureCardHeader {
+.featureCardHeader {
   margin-top: 0.5em;
 }
-.feaureCardHeader h3 {
+.featureCardHeader h3 {
   font-size: 1.2rem;
 }
 .featureCardDescription {
@@ -29,40 +30,71 @@
   bottom: 0.5em;
 }
 
-/* Mobile (phones) */
-@media (max-width: 599px) {
-}
-
 /* Tablet (small landscape/tablet) */
 @media (min-width: 600px) and (max-width: 959px) {
+  .featureCard {
+    flex: 1 1 0;
+    padding-bottom: 5rem;
+  }
 }
 
 /* Small Desktop / Laptops */
-@media (min-width: 960px) and (max-width: 1279px) {
+@media (min-width: 960px) and (max-width: 1280px) {
   .featureCard {
-    height: 290px;
-    width: 290px;
-    padding: 20px;
+    max-height: 15rem;
+    min-height: 15rem;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1.5em;
+    padding-bottom: 9rem;
   }
-  .feaureCardHeader {
-    margin-top: 10px;
+
+  .featureCardHeader {
+    margin-top: 0.3em;
   }
-  .feaureCardHeader h3 {
-    font-size: 23px;
+  .featureCardHeader h3 {
+    font-size: 1.5rem;
   }
   .featureCardDescription {
-    margin-top: 20px;
+    margin-top: 1em;
   }
   .featureCardDescription p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
   }
   .featureSvgContainer {
-    right: 10px;
-    bottom: 10px;
+    right: 0.5em;
+    bottom: 0.5em;
   }
 }
 
 /* Large Desktops / TVs */
 @media (min-width: 1280px) {
+  .featureCard {
+    width: 100%;
+    min-height: 20rem;
+    padding: 1em;
+    border-radius: 1rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  .featureCardHeader {
+    margin-top: 0.3em;
+  }
+  .featureCardHeader h3 {
+    font-size: 1.5rem;
+  }
+  .featureCardDescription {
+    margin-top: 1em;
+  }
+  .featureCardDescription p {
+    font-size: 1.1rem;
+    max-width: 12rem;
+    font-weight: 500;
+  }
+  .featureSvgContainer {
+    right: 0.5em;
+    bottom: 0.5em;
+  }
 }

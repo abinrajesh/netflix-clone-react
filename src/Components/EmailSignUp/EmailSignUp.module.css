@@ -4,18 +4,12 @@
   flex-direction: column;
   align-items: center;
 }
-.exploreEmailSignup {
-  min-width: 30rem;
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.emailSignup h3,
-.exploreEmailSignup h3 {
+
+.emailSignup h3 {
   color: white;
   font-size: 1rem;
   font-weight: normal;
+  text-align: center;
 }
 .emailSignupForm {
   width: 100%;
@@ -25,14 +19,7 @@
   align-items: center;
   gap: 1em;
 }
-.exploreEmailSignupForm {
-  width: 100%;
-  margin-top: 1.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1em;
-}
+
 .emailInputSection {
   position: relative;
   display: flex;
@@ -45,7 +32,8 @@
   border: none;
   box-sizing: border-box;
   border-radius: 4px;
-  min-width: 33.7rem;
+  min-width: 90vw;
+
   padding: 1.5rem 1rem;
   padding-bottom: 0.7rem;
   font-size: 1rem;
@@ -87,29 +75,43 @@
   margin-left: 10px;
 }
 
+/* Explore Email Section */
+.exploreEmailSignup {
+  min-width: 30rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.exploreEmailSignup h3 {
+  color: white;
+  font-size: 1rem;
+  max-width: 90vw;
+  font-weight: normal;
+  /* text-align: center; */
+}
+
+.exploreEmailSignupForm {
+  width: 100%;
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+}
+
 /* Tab */
 @media (min-width: 600px) and (max-width: 960px) {
   .emailSignup {
     max-width: 26rem;
     text-align: center;
   }
-  .exploreEmailSignup {
-    width: 100%;
-    margin-top: 5rem;
-    align-items: center;
-  }
+
   .emailSignupForm {
     flex-direction: row;
     gap: 0.5em;
   }
-  .exploreEmailSignupForm {
-    max-width: 10rem;
-    margin-top: 1.5em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1em;
-  }
+
   .emailInputSection .emailSignupInput {
     min-width: 16rem;
     padding: 1.5rem 1rem;
@@ -136,46 +138,192 @@
     padding: 0.8rem 0.9rem;
     font-size: 1rem;
   }
+  /* Explore Email Section */
+  .exploreEmailSignup {
+    width: 100%;
+    margin-top: 5rem;
+    align-items: center;
+  }
+  .exploreEmailSignupForm {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+  }
+  .exploreEmailSignup .emailInputSection .emailSignupInput {
+    min-width: 100%;
+    padding: 1.5rem 1rem;
+    padding-right: 30rem;
+    padding-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .exploreEmailSignupForm .emailSignupInput:focus + .emailInputPlaceholder {
+    left: 1rem;
+    top: 1rem;
+    font-size: 0.7rem;
+  }
+  .exploreEmailSignupForm .getStartedBtn {
+    width: 20rem;
+    padding: 0.8rem 1.95rem;
+    font-size: 1rem;
+  }
 }
-
 
 /* Lap */
 @media (min-width: 960px) and (max-width: 1280px) {
   .emailSignup {
-    margin-top: 30px;
+    text-align: center;
+    margin-top: 1.5em;
   }
   .emailSignup h3 {
-    font-size: 16px;
+    max-width: 26em;
+    font-size: 1rem;
+    font-weight: 500;
   }
   .emailSignupForm {
-    margin-top: 20px;
+    margin-top: 1.5em;
     display: flex;
-    gap: 10px;
+    flex-direction: row;
+    gap: 0.5em;
   }
   .emailInputSection .emailSignupInput {
-    min-width: 400px;
-    padding: 30px 25px;
-    padding-bottom: 15px;
-    font-size: 16px;
+    min-width: 20rem;
+    padding: 1.5rem 1rem;
+    padding-bottom: 0.7rem;
+    font-size: 1rem;
   }
   .emailInputPlaceholder {
-    font-size: 16px;
-    top: 30px;
-    left: 25px;
-    transform: translateY(-50%);
+    position: absolute;
+    font-size: 1rem;
+    top: 1.5rem;
+    left: 1em;
+    color: #aaa;
+    transform: translateY(-30%);
+    transition: all 0.2s ease;
+    pointer-events: none;
   }
   .emailSignupInput:focus + .emailInputPlaceholder {
-    top: 20px;
-    font-size: 10px;
+    left: 1rem;
+    top: 1rem;
+    font-size: 0.7rem;
   }
   .getStartedBtn {
-    padding: 15px 25px;
+    width: 11rem;
+    padding: 0.8rem 1.7rem;
+    font-size: 1rem;
   }
   .getStartedBtn svg {
     margin-left: 10px;
+  }
+
+  /* Explore Email Section */
+  .exploreEmailSignup {
+    width: 100%;
+    margin-top: 5rem;
+    align-items: center;
+  }
+  .exploreEmailSignupForm {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+  }
+  .exploreEmailSignup .emailInputSection .emailSignupInput {
+    min-width: 50%;
+    padding: 1.5rem 1rem;
+    padding-right: 15rem;
+    padding-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .exploreEmailSignupForm .emailSignupInput:focus + .emailInputPlaceholder {
+    left: 1rem;
+    top: 1rem;
+    font-size: 0.7rem;
+  }
+  .exploreEmailSignupForm .getStartedBtn {
+    width: 11.7rem;
+    padding: 0.8rem 1.95rem;
+    font-size: 1rem;
   }
 }
 
 /* Large Desktops / TVs */
 @media (min-width: 1280px) {
+  .emailSignup {
+    text-align: center;
+    margin-top: 1.5em;
+  }
+  .emailSignup h3 {
+    max-width: 32em;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .emailSignupForm {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  .emailInputSection .emailSignupInput {
+    min-width: 25rem;
+    padding: 1.5rem 1rem;
+    padding-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .emailInputPlaceholder {
+    position: absolute;
+    font-size: 1rem;
+    top: 1.5rem;
+    left: 1em;
+    color: #aaa;
+    transform: translateY(-30%);
+    transition: all 0.2s ease;
+    pointer-events: none;
+  }
+  .emailSignupInput:focus + .emailInputPlaceholder {
+    left: 1rem;
+    top: 1rem;
+    font-size: 0.7rem;
+  }
+  .getStartedBtn {
+    width: 14.5rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.5rem;
+  }
+  .getStartedBtn svg {
+    margin-left: 10px;
+  }
+
+  /* Explore Email Section */
+  .exploreEmailSignup {
+    width: 100%;
+    margin-top: 5rem;
+    align-items: center;
+  }
+  .exploreEmailSignupForm {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+  }
+  .exploreEmailSignup .emailInputSection .emailSignupInput {
+    min-width: 50%;
+    padding: 1.5rem 1rem;
+    padding-right: 15rem;
+    padding-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+  .exploreEmailSignupForm .emailSignupInput:focus + .emailInputPlaceholder {
+    left: 1rem;
+    top: 1rem;
+    font-size: 0.7rem;
+  }
+  .exploreEmailSignupForm .getStartedBtn {
+    width: 14.5rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.5rem;
+  }
 }

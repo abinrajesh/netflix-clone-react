@@ -41,7 +41,7 @@
   justify-content: center;
   height: 100%;
   padding: 0 0.5rem;
-  z-index: 10;
+  z-index: 9;
 }
 .scrollBtn {
   height: 60%;
@@ -71,68 +71,128 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-/* Mobile (phones) */
-@media (max-width: 599px) {
-}
-
-/* Tablet (small landscape/tablet) */
-@media (min-width: 600px) and (max-width: 959px) {
-}
-
 /* Small Desktop / Laptops */
-@media (min-width: 960px) and (max-width: 1279px) {
+@media (min-width: 960px) and (max-width: 1280px) {
   .trendingSection {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5em;
     color: white;
   }
   .trendingHeader h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
+  }
+  .trendingContent {
+    position: relative;
   }
   .trendingContent ul {
     list-style-type: none;
-    padding: 20px;
+    padding: 1em;
     display: flex;
-    gap: 30px;
+    gap: 3em;
     overflow-x: scroll;
     overflow-y: hidden;
     scrollbar-width: none;
     scroll-behavior: smooth;
   }
+
+  .trendingContent ul li {
+    flex-shrink: 0;
+  }
+
   .scrollBtns {
     width: 100%;
-    height: 310px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    position: absolute;
+    height: 15rem;
+    gap: 0.5em;
   }
   .scrollBtnBg {
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90%;
-    padding: 0 15px;
+    height: 100%;
+    padding: 0 0.5rem;
     z-index: 10;
   }
   .scrollBtn {
-    height: 40%;
-    border-radius: 10px;
-    background-color: hsla(0, 0%, 10%, 1);
-    border: none;
-    color: white;
+    height: 60%;
   }
+  .scrollBtn:hover {
+    background-color: hsla(0, 0%, 5%, 1);
+  }
+
   .leftScrollBtnBG {
-    left: -10px;
+    left: -1em;
   }
   .rightScrollBtnBG {
-    right: -10px;
+    right: -1em;
+  }
+  .visible {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
   }
 }
 
 /* Large Desktops / TVs */
 @media (min-width: 1280px) {
+  .trendingSection {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5em;
+    color: white;
+  }
+  .trendingHeader h3 {
+    font-size: 1.5rem;
+  }
+  .trendingContent {
+    position: relative;
+  }
+  .trendingContent ul {
+    list-style-type: none;
+    padding: 1em;
+    display: flex;
+    gap: 3em;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+  }
+
+  .trendingContent ul li {
+    flex-shrink: 0;
+  }
+
+  .scrollBtns {
+    width: 100%;
+    height: 17rem;
+    gap: 0.5em;
+  }
+  .scrollBtnBg {
+    height: 100%;
+    padding: 0 0.5rem;
+    z-index: 10;
+  }
+  .scrollBtn {
+    height: 60%;
+  }
+  .scrollBtn:hover {
+    background-color: hsla(0, 0%, 5%, 1);
+  }
+
+  .leftScrollBtnBG {
+    left: -1em;
+  }
+  .rightScrollBtnBG {
+    right: -1em;
+  }
+  .visible {
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+  }
 }

@@ -85,13 +85,10 @@
   overflow: hidden;
 }
 
-/* Mobile (phones) */
-@media (max-width: 599px) {
-}
-
 /* Tablet (small landscape/tablet) */
 @media (min-width: 600px) and (max-width: 960px) {
   .bannerContent {
+    min-width: 30rem;
     width: 50%;
   }
   .bannerHeader h1 {
@@ -115,21 +112,44 @@
     height: 97vh;
   }
   .bannerContent {
-    width: 50%;
+    width: 30%;
+    min-width: 40vw;
   }
   .bannerHeader h1 {
-    font-size: 4rem;
+    font-size: 2.3rem;
+    font-weight: bolder;
   }
   .bannerHeader {
-    margin-top: 20%;
+    margin-top: 40%;
   }
   .bannerHeader p {
-    margin-top: 30px;
-    font-size: 20px;
-    font-weight: bold;
+    margin-top: 0.5em;
+    font-size: 1em;
+    font-weight: 600;
   }
 }
 
 /* Large Desktops / TVs */
 @media (min-width: 1280px) {
+  .banner {
+    height: 97vh;
+  }
+  .bannerOverlay {
+    height: 97vh;
+  }
+  .bannerContent {
+    width: 50%;
+  }
+  .bannerHeader h1 {
+    font-size: 3.2rem;
+    font-weight: 900;
+  }
+  .bannerHeader {
+    margin-top: 20%;
+  }
+  .bannerHeader p {
+    margin-top: 1em;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
 }

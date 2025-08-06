@@ -25,26 +25,26 @@
   bottom: 0;
 }
 
-/* Mobile (phones) */
-@media (max-width: 599px) {
-}
-
-/* Tablet (small landscape/tablet) */
-@media (min-width: 600px) and (max-width: 959px) {
-}
-
 /* Small Desktop / Laptops */
-@media (min-width: 960px) and (max-width: 1279px) {
+@media (min-width: 960px) and (max-width: 1280px) {
   .trendingCard {
-    height: 270px;
-    width: 200px;
+    height: 13rem;
+    width: 9rem;
   }
   .trendingCard h1 {
-    font-size: 110px;
-    left: -20px;
+    font-size: 5rem;
+    left: -0.17em;
   }
 }
 
 /* Large Desktops / TVs */
 @media (min-width: 1280px) {
+  .trendingCard {
+    height: 15rem;
+    width: 11rem;
+  }
+  .trendingCard h1 {
+    font-size: 7rem;
+    left: -0.17em;
+  }
 }

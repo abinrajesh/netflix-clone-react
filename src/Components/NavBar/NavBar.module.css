@@ -6,6 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   background: #000000;
   background: linear-gradient(
     180deg,
@@ -14,6 +15,7 @@
   );
   position: relative;
   z-index: 999;
+
 }
 .navBar .logoContainer svg {
   width: 6rem;
@@ -44,30 +46,48 @@
 
 /* Tablet (small landscape/tablet) */
 @media screen and (max-width: 959px) and (min-width: 600px) {
-  
 }
 
 /* Small Desktop / Laptops */
-@media (min-width: 960px) and (max-width: 1279px) {
+@media (min-width: 960px) and (max-width: 1280px) {
   .navBar {
     width: 100%;
     height: 10vh;
-    padding: 0 2em;
+    padding: 0 5em;
+    padding-top: 1em;
   }
   .navBar .logoContainer svg {
-    width: 150px;
+    width: 10rem;
   }
   .signIn .signInBtn {
-    padding: 7px 20px;
+    padding: 0.5em 0.9em;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    font-weight: 600;
   }
   .navBarActionControls {
-    gap: 15px;
-  }
-  .signIn .signInBtn {
-    padding: 7px 20px;
+    gap: 0.8em;
   }
 }
 
 /* Large Desktops / TVs */
 @media (min-width: 1280px) {
+  .navBar {
+    width: 100%;
+    height: 10vh;
+    padding: 0 9em;
+    padding-top: 1.5em;
+  }
+  .navBar .logoContainer svg {
+    width: 10rem;
+  }
+  .signIn .signInBtn {
+    padding: 0.5em 0.9em;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    font-weight: 600;
+  }
+  .navBarActionControls {
+    gap: 0.8em;
+  }
 }

@@ -6,7 +6,7 @@ function FeatureCard(props) {
   return (
     <div className={classNames(styles.featureCard)}>
       <div className={classNames(styles.featureCardContent)}>
-        <div className={classNames(styles.feaureCardHeader)}>
+        <div className={classNames(styles.featureCardHeader)}>
           <h3>{props.title}</h3>
         </div>
         <div className={classNames(styles.featureCardDescription)}>

@@ -36,8 +36,8 @@ function PreviewModal({ onClose, movieDetails }) {
   }, []);
 
   const opts = {
-    height: "300",
-    width: "640",
+    height: "100%",
+    width: "100%",
     playerVars: {
       autoplay: 1,
       controls: 0,
